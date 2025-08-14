@@ -164,35 +164,46 @@ export function ArticleContent({ article }: ArticleContentProps) {
         {/* References */}
         {article.references.length > 0 && (
           <div className="clear-both">
-            <h2 id="references" className="text-lg font-bold mt-6 mb-3 border-b border-wiki-border pb-1 text-wiki" data-testid="heading-references">
+            <h2 id="references" className="text-xl font-normal mt-8 mb-4 border-b border-gray-300 pb-1 text-black" data-testid="heading-references">
               References
             </h2>
-            <ol className="text-xs space-y-1 mb-4" data-testid="section-references">
-              {article.references.map((ref) => (
-                <li key={ref.id} className="text-wiki" data-testid={`reference-${ref.id}`}>
-                  <span className="text-wiki-muted">^ </span>
-                  {ref.text}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 text-sm leading-relaxed mb-4" data-testid="section-references">
+              {article.references.map((ref, index) => (
+                <div key={ref.id} className="mb-3 break-inside-avoid" data-testid={`reference-${ref.id}`}>
+                  <span className="text-blue-600 font-normal">↑ </span>
+                  <span className="text-blue-600 hover:underline cursor-pointer">{index + 1}.0</span>
+                  <span className="ml-1 text-black">{ref.text}</span>
                   {ref.url && (
-                    <a href={ref.url} className="wiki-link ml-1" data-testid={`link-reference-${ref.id}`}>
-                      [Link]
+                    <a href={ref.url} className="text-blue-600 hover:underline ml-1" data-testid={`link-reference-${ref.id}`}>
+                      Retrieved {new Date().getFullYear()}.
                     </a>
                   )}
-                </li>
+                </div>
               ))}
-            </ol>
+            </div>
           </div>
         )}
 
+        {/* External Links */}
+        <div className="clear-both mt-8">
+          <h2 className="text-xl font-normal mb-4 border-b border-gray-300 pb-1 text-black">External links</h2>
+          <ul className="text-sm text-blue-600 mb-6">
+            <li className="mb-1">
+              <a href="#" className="hover:underline">Wikimedia Commons has media related to {article.title}.</a>
+            </li>
+          </ul>
+        </div>
+
         {/* Categories */}
         {article.categories.length > 0 && (
-          <div className="mt-6 pt-3 border-t border-wiki-border clear-both" data-testid="section-categories">
-            <div className="text-xs text-wiki">
+          <div className="mt-8 pt-4 border-t border-gray-300 clear-both bg-gray-50 -mx-4 px-4 py-3" data-testid="section-categories">
+            <div className="text-sm text-black">
               <strong>Categories:</strong>{" "}
               {article.categories.map((category, index) => (
                 <span key={category}>
                   <a 
                     href={`https://en.wikipedia.org/wiki/Category:${category.replace(/\s+/g, '_')}`}
-                    className="wiki-link"
+                    className="text-blue-600 hover:underline"
                     data-testid={`link-category-${index}`}
                   >
                     {category}

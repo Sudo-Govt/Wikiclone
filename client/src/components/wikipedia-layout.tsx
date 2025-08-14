@@ -38,83 +38,106 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
   return (
     <div className="min-h-screen bg-wiki-header font-wiki text-wiki">
       {/* Header */}
-      <header className="bg-wiki-header border-b border-wiki-border shadow-sm">
-        <div className="max-w-none px-3">
-          <div className="flex items-center h-12">
-            {/* Logo and Title */}
+      <header className="bg-white border-b border-gray-300 shadow-sm">
+        <div className="max-w-none px-4 py-2">
+          <div className="flex items-center justify-between">
+            {/* Left side - Logo and Title */}
             <div className="flex items-center">
               <Button
                 variant="ghost"
                 size="sm"
-                className="lg:hidden p-1 h-8 w-8 mr-2"
+                className="lg:hidden p-1 h-8 w-8 mr-3"
                 onClick={toggleSidebar}
                 data-testid="button-menu-toggle"
               >
-                {isSidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+                <Menu className="w-5 h-5" />
               </Button>
-              <a href="https://wikipedia.org" className="flex items-center mr-4" data-testid="link-wikipedia-home">
-                <svg className="w-8 h-8 mr-2" viewBox="0 0 103 94" fill="none">
-                  <path d="M51.5 22.5c-3.7 0-7.5 2.7-7.5 7.5v42c0 4.8 3.8 7.5 7.5 7.5s7.5-2.7 7.5-7.5V30c0-4.8-3.8-7.5-7.5-7.5z" fill="#000"/>
-                  <path d="M38.5 30l-12 42h6l9-32 9 32h6l-12-42h-6zm26 0l-12 42h6l9-32 9 32h6l-12-42h-6z" fill="#000"/>
-                  <text x="51.5" y="90" textAnchor="middle" fontSize="12" fill="#000" fontFamily="serif">WIKIPEDIA</text>
+              
+              {/* Wikipedia Logo */}
+              <div className="flex items-center mr-6">
+                <svg className="w-12 h-12 mr-3" viewBox="0 0 50 50" fill="none">
+                  <circle cx="25" cy="25" r="22" fill="none" stroke="#333" strokeWidth="1"/>
+                  <g fontSize="3.5" fill="#333" fontFamily="serif">
+                    <text x="8" y="15" fontSize="4">W</text>
+                    <text x="42" y="15" fontSize="4">W</text>
+                    <text x="25" y="12" fontSize="3">i</text>
+                    <text x="20" y="20" fontSize="3">k</text>
+                    <text x="30" y="20" fontSize="3">i</text>
+                    <text x="15" y="28" fontSize="3">p</text>
+                    <text x="35" y="28" fontSize="3">p</text>
+                    <text x="25" y="25" fontSize="3">e</text>
+                    <text x="18" y="35" fontSize="3">d</text>
+                    <text x="32" y="35" fontSize="3">d</text>
+                    <text x="25" y="38" fontSize="3">i</text>
+                    <text x="22" y="42" fontSize="3">a</text>
+                    <text x="28" y="42" fontSize="3">a</text>
+                  </g>
                 </svg>
-                <span className="text-base font-normal hidden sm:block">Wikipedia</span>
-              </a>
+                <div>
+                  <h1 className="text-xl font-serif text-black leading-tight">
+                    <span className="font-normal">WIKIP</span><span className="font-bold">E</span><span className="font-normal">DIA</span>
+                  </h1>
+                  <p className="text-sm text-gray-600 -mt-1">The Free Encyclopedia</p>
+                </div>
+              </div>
             </div>
 
-            {/* Search Bar */}
-            <div className="flex-1 max-w-md relative">
-              <div className="flex border border-wiki-border rounded">
-                <Input
-                  type="search"
-                  placeholder="Search Wikipedia"
-                  value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  className="flex-1 border-0 rounded-none rounded-l h-8 text-sm focus:ring-0 focus:border-blue-500"
-                  data-testid="input-search"
-                />
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="h-8 px-3 border-0 border-l border-wiki-border rounded-none rounded-r bg-wiki-bg hover:bg-gray-200"
-                  data-testid="button-search"
-                >
+            {/* Right side - Search and User Menu */}
+            <div className="flex items-center space-x-4">
+              {/* Search Bar */}
+              <div className="flex-1 max-w-md relative">
+                <div className="flex border border-gray-300 rounded">
+                  <Input
+                    type="search"
+                    placeholder="Search Wikipedia"
+                    value={searchQuery}
+                    onChange={(e) => handleSearch(e.target.value)}
+                    className="flex-1 border-0 rounded-none rounded-l h-8 text-sm focus:ring-0 focus:border-blue-500"
+                    data-testid="input-search"
+                  />
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="h-8 px-3 border-0 border-l border-gray-300 rounded-none rounded-r bg-gray-50 hover:bg-gray-100"
+                    data-testid="button-search"
+                  >
+                    <Search className="w-4 h-4" />
+                  </Button>
+                </div>
+                
+                {/* Search Results Dropdown */}
+                {showSearchResults && searchResults.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 bg-white border border-gray-300 shadow-lg z-50 max-h-60 overflow-y-auto">
+                    {searchResults.map((result) => (
+                      <Link
+                        key={result.id}
+                        href={`/article/${result.id}`}
+                        className="block px-3 py-2 text-sm hover:bg-gray-100 text-blue-600 border-b border-gray-100 last:border-b-0"
+                        onClick={() => {
+                          setShowSearchResults(false);
+                          setSearchQuery("");
+                        }}
+                        data-testid={`link-search-result-${result.id}`}
+                      >
+                        {result.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Top Navigation Links */}
+              <div className="hidden md:flex items-center space-x-4 text-sm">
+                <Button variant="ghost" size="sm" className="p-1">
                   <Search className="w-4 h-4" />
                 </Button>
+                <a href="https://donate.wikimedia.org" className="text-blue-600 hover:underline">Donate</a>
+                <a href="https://en.wikipedia.org/wiki/Special:CreateAccount" className="text-blue-600 hover:underline">Create account</a>
+                <a href="https://en.wikipedia.org/wiki/Special:UserLogin" className="text-blue-600 hover:underline">Log in</a>
+                <Button variant="ghost" size="sm" className="p-1">
+                  ⋯
+                </Button>
               </div>
-              
-              {/* Search Results Dropdown */}
-              {showSearchResults && searchResults.length > 0 && (
-                <div className="absolute top-full left-0 right-0 bg-white border border-wiki-border shadow-lg z-50 max-h-60 overflow-y-auto">
-                  {searchResults.map((result) => (
-                    <Link
-                      key={result.id}
-                      href={`/article/${result.id}`}
-                      className="block px-3 py-2 text-sm hover:bg-gray-100 wiki-link border-b border-gray-100 last:border-b-0"
-                      onClick={() => {
-                        setShowSearchResults(false);
-                        setSearchQuery("");
-                      }}
-                      data-testid={`link-search-result-${result.id}`}
-                    >
-                      {result.title}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            {/* User Menu */}
-            <div className="flex items-center ml-4 text-xs">
-              <a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount" className="wiki-link mr-3 hidden sm:block" data-testid="link-create-account">
-                Create account
-              </a>
-              <a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin" className="wiki-link mr-3" data-testid="link-login">
-                Log in
-              </a>
-              <Button variant="ghost" size="sm" className="p-1 h-6 w-6" data-testid="button-user-menu">
-                <div className="w-3 h-3 border border-gray-400 rounded-sm bg-gray-200"></div>
-              </Button>
             </div>
           </div>
         </div>
