@@ -52,10 +52,10 @@ export function searchArticles(query: string): Article[] {
   
   const lowercaseQuery = query.toLowerCase();
   return articlesData.filter(article => 
-    article.title.toLowerCase().includes(lowercaseQuery) ||
-    article.summary.toLowerCase().includes(lowercaseQuery) ||
+    (article.title?.toLowerCase().includes(lowercaseQuery) || false) ||
+    (article.summary?.toLowerCase().includes(lowercaseQuery) || false) ||
     article.content.some(section => 
-      section.text?.toLowerCase().includes(lowercaseQuery)
+      section.text?.toLowerCase().includes(lowercaseQuery) || false
     )
   );
 }

@@ -19,10 +19,11 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
   const articles = getAllArticles();
 
   const handleSearch = (query: string) => {
-    setSearchQuery(query);
-    if (query.trim()) {
-      const results = searchArticles(query);
-      setSearchResults(results.map(a => ({ id: a.id, title: a.title })));
+    const safeQuery = query || "";
+    setSearchQuery(safeQuery);
+    if (safeQuery.trim()) {
+      const results = searchArticles(safeQuery);
+      setSearchResults(results.map(a => ({ id: a.id || "", title: a.title || "" })));
       setShowSearchResults(true);
     } else {
       setSearchResults([]);
