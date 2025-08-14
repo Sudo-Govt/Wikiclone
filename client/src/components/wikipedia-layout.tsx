@@ -140,37 +140,37 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             <div className="mb-4">
               <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Navigation</h3>
               <ul className="text-xs leading-relaxed">
-                <li>
+                <li key="main-page">
                   <Link href="/" className="block py-0.5 wiki-link" data-testid="link-main-page">
                     Main page
                   </Link>
                 </li>
-                <li>
+                <li key="contents">
                   <a href="https://en.wikipedia.org/wiki/Special:Contents" className="block py-0.5 wiki-link" data-testid="link-contents">
                     Contents
                   </a>
                 </li>
-                <li>
+                <li key="featured-content">
                   <a href="https://en.wikipedia.org/wiki/Wikipedia:Featured_articles" className="block py-0.5 wiki-link" data-testid="link-featured-articles">
                     Featured content
                   </a>
                 </li>
-                <li>
+                <li key="current-events">
                   <a href="https://en.wikipedia.org/wiki/Portal:Current_events" className="block py-0.5 wiki-link" data-testid="link-current-events">
                     Current events
                   </a>
                 </li>
-                <li>
+                <li key="random-article">
                   <a href="https://en.wikipedia.org/wiki/Special:Random" className="block py-0.5 wiki-link" data-testid="link-random-article">
                     Random article
                   </a>
                 </li>
-                <li>
+                <li key="donate">
                   <a href="https://donate.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-donate">
                     Donate to Wikipedia
                   </a>
                 </li>
-                <li>
+                <li key="shop">
                   <a href="https://shop.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-shop">
                     Wikipedia store
                   </a>
@@ -181,27 +181,27 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             <div className="mb-4">
               <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Interaction</h3>
               <ul className="text-xs leading-relaxed">
-                <li>
+                <li key="help">
                   <a href="https://en.wikipedia.org/wiki/Help:Contents" className="block py-0.5 wiki-link" data-testid="link-help">
                     Help
                   </a>
                 </li>
-                <li>
+                <li key="about">
                   <a href="https://en.wikipedia.org/wiki/Wikipedia:About" className="block py-0.5 wiki-link" data-testid="link-about">
                     About Wikipedia
                   </a>
                 </li>
-                <li>
+                <li key="community">
                   <a href="https://en.wikipedia.org/wiki/Wikipedia:Community_portal" className="block py-0.5 wiki-link" data-testid="link-community">
                     Community portal
                   </a>
                 </li>
-                <li>
+                <li key="recent-changes">
                   <a href="https://en.wikipedia.org/wiki/Special:RecentChanges" className="block py-0.5 wiki-link" data-testid="link-recent-changes">
                     Recent changes
                   </a>
                 </li>
-                <li>
+                <li key="contact">
                   <a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" className="block py-0.5 wiki-link" data-testid="link-contact">
                     Contact page
                   </a>
@@ -212,32 +212,32 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             <div className="mb-4">
               <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Tools</h3>
               <ul className="text-xs leading-relaxed">
-                <li>
+                <li key="what-links-here">
                   <a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere" className="block py-0.5 wiki-link" data-testid="link-what-links-here">
                     What links here
                   </a>
                 </li>
-                <li>
+                <li key="related-changes">
                   <a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked" className="block py-0.5 wiki-link" data-testid="link-related-changes">
                     Related changes
                   </a>
                 </li>
-                <li>
+                <li key="special-pages">
                   <a href="https://en.wikipedia.org/wiki/Special:SpecialPages" className="block py-0.5 wiki-link" data-testid="link-special-pages">
                     Special pages
                   </a>
                 </li>
-                <li>
+                <li key="permanent-link">
                   <a href="https://en.wikipedia.org/wiki/Special:PermanentLink" className="block py-0.5 wiki-link" data-testid="link-permanent-link">
                     Permanent link
                   </a>
                 </li>
-                <li>
+                <li key="page-info">
                   <a href="https://en.wikipedia.org/wiki/Special:Information" className="block py-0.5 wiki-link" data-testid="link-page-info">
                     Page information
                   </a>
                 </li>
-                <li>
+                <li key="wikidata">
                   <a href="https://www.wikidata.org" className="block py-0.5 wiki-link" data-testid="link-wikidata">
                     Wikidata item
                   </a>
@@ -248,7 +248,7 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             <div className="mb-4">
               <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Print/export</h3>
               <ul className="text-xs leading-relaxed">
-                <li>
+                <li key="printable">
                   <a href="#" className="block py-0.5 wiki-link" data-testid="link-printable">
                     Printable version
                   </a>
@@ -259,7 +259,7 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             <div className="mb-4">
               <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">In other projects</h3>
               <ul className="text-xs leading-relaxed">
-                <li>
+                <li key="commons">
                   <a href="https://commons.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-commons">
                     Wikimedia Commons
                   </a>
