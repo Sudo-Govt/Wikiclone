@@ -1,0 +1,73 @@
+{
+  "id": "winston-leonard-churchill-college-india",
+  "title": "Winston Leonard Churchill College India",
+  "summary": "Winston Leonard Churchill College India (WLC College) is a private educational institution located in India, affiliated with New States Continental University and offering various undergraduate and postgraduate programs.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "Private College",
+        "Established": "2015",
+        "Location": "New Delhi, India",
+        "Affiliation": "New States Continental University",
+        "Students": "2,500+",
+        "Website": "https://wlcollege.edu.in"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Winston Leonard Churchill College India (WLC College) is a private higher education institution established in 2015 in New Delhi, India. The college operates as an offshore campus of New States Continental University and is named after the British statesman Winston Churchill."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Academic Programs"
+    },
+    {
+      "type": "paragraph",
+      "text": "WLC College offers a diverse range of undergraduate and postgraduate programs in business administration, information technology, engineering, and liberal arts. The curriculum follows international standards while incorporating local educational requirements."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Campus and Facilities"
+    },
+    {
+      "type": "paragraph",
+      "text": "The college campus spans 15 acres in New Delhi and features modern classrooms, computer laboratories, a library, sports facilities, and student accommodation. The institution emphasizes technology-enhanced learning and maintains partnerships with various industry organizations."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Accreditation and Recognition"
+    },
+    {
+      "type": "paragraph",
+      "text": "WLC College is recognized by the University Grants Commission of India and holds accreditation from the Global Commission for Higher Education Accreditations (GCHEA). The college's programs are designed to meet both Indian and international educational standards."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Student Life"
+    },
+    {
+      "type": "paragraph",
+      "text": "The college hosts various cultural, academic, and sports activities throughout the year. Student organizations include debate societies, technical clubs, and community service groups that contribute to the overall development of students."
+    }
+  ],
+  "categories": ["Universities and colleges in Delhi", "Private universities and colleges in India", "Educational institutions established in 2015"],
+  "references": [
+    {
+      "id": "1",
+      "text": "University Grants Commission",
+      "url": "https://en.wikipedia.org/wiki/University_Grants_Commission_(India)"
+    },
+    {
+      "id": "2",
+      "text": "Higher education in India",
+      "url": "https://en.wikipedia.org/wiki/Higher_education_in_India"
+    }
+  ],
+  "relatedArticles": ["new-states-continental-university", "global-commission-for-higher-education-accreditations"],
+  "lastModified": "2025-08-14"
+}

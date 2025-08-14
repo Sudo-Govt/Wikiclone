@@ -1,0 +1,73 @@
+{
+  "id": "swami-gyananand-shiksha-parishad-trust",
+  "title": "Swami Gyananand Shiksha Parishad Trust - Arunachal Pradesh",
+  "summary": "Swami Gyananand Shiksha Parishad Trust is an educational trust organization operating in Arunachal Pradesh, India, dedicated to promoting education and cultural development in the region.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "Educational Trust",
+        "Established": "2005",
+        "Location": "Arunachal Pradesh, India",
+        "Founder": "Swami Gyananand",
+        "Focus Area": "Education & Cultural Development",
+        "Website": "https://gyananandtrust.org"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Swami Gyananand Shiksha Parishad Trust is a non-profit educational organization established in 2005 in Arunachal Pradesh, India. Founded by Swami Gyananand, the trust focuses on promoting quality education, preserving local culture, and supporting educational infrastructure development in northeastern India."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mission and Vision"
+    },
+    {
+      "type": "paragraph",
+      "text": "The trust's mission is to provide accessible quality education while preserving the rich cultural heritage of Arunachal Pradesh. The organization works to bridge the educational gap between urban and rural areas, with special emphasis on supporting underprivileged communities."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Educational Initiatives"
+    },
+    {
+      "type": "paragraph",
+      "text": "The trust operates multiple educational programs including scholarship schemes, teacher training workshops, infrastructure development projects, and community education centers. It has partnerships with various schools including Almonte Higher Secondary School."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Cultural Preservation"
+    },
+    {
+      "type": "paragraph",
+      "text": "Beyond formal education, the trust actively works to preserve and promote the indigenous cultures, languages, and traditions of Arunachal Pradesh. It organizes cultural events, documentation projects, and awareness programs to maintain the region's cultural identity."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Community Impact"
+    },
+    {
+      "type": "paragraph",
+      "text": "Since its establishment, the trust has benefited thousands of students through its various programs. It has contributed to improving literacy rates, educational quality, and cultural awareness in remote areas of Arunachal Pradesh."
+    }
+  ],
+  "categories": ["Educational organizations in India", "Non-profit organizations in India", "Organizations based in Arunachal Pradesh"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Education in Arunachal Pradesh",
+      "url": "https://en.wikipedia.org/wiki/Education_in_Arunachal_Pradesh"
+    },
+    {
+      "id": "2",
+      "text": "Non-governmental organizations in India",
+      "url": "https://en.wikipedia.org/wiki/Non-governmental_organisations_in_India"
+    }
+  ],
+  "relatedArticles": ["almonte-higher-secondary-school-arunachal-pradesh"],
+  "lastModified": "2025-08-14"
+}

@@ -1,0 +1,73 @@
+{
+  "id": "weqsc-international-secondary-examination-wise",
+  "title": "WEQSC International Secondary Examination - WISE",
+  "summary": "The WEQSC International Secondary Examination (WISE) is a standardized international assessment program developed by the World Education Quality Standards Commission for secondary school students worldwide.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "International Examination",
+        "Established": "2010",
+        "Administering Body": "World Education Quality Standards Commission",
+        "Participating Countries": "25+",
+        "Annual Candidates": "50,000+",
+        "Website": "https://wise.weqsc.org"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The WEQSC International Secondary Examination (WISE) is a comprehensive assessment program established in 2010 by the World Education Quality Standards Commission. WISE provides a standardized evaluation framework for secondary education students across multiple countries and educational systems."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Examination Structure"
+    },
+    {
+      "type": "paragraph",
+      "text": "WISE consists of core subjects including Mathematics, Sciences, Languages, and Social Studies, along with optional specialized subjects. The examination is conducted annually in May and November, with assessments available in multiple languages to accommodate diverse student populations."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Global Recognition"
+    },
+    {
+      "type": "paragraph",
+      "text": "WISE qualifications are recognized by universities and educational institutions in over 25 countries. The examination results are accepted for admission purposes and provide students with internationally comparable academic credentials."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Participating Institutions"
+    },
+    {
+      "type": "paragraph",
+      "text": "Over 500 schools worldwide offer WISE examinations to their students, including Almonte Higher Secondary School in Arunachal Pradesh and various international schools affiliated with WEQSC member institutions."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Assessment Methodology"
+    },
+    {
+      "type": "paragraph",
+      "text": "WISE employs a combination of traditional written examinations, practical assessments, and continuous evaluation methods. The grading system follows international standards and provides detailed feedback to support student development and university applications."
+    }
+  ],
+  "categories": ["International examinations", "Secondary education", "Educational assessment", "Standardized tests"],
+  "references": [
+    {
+      "id": "1",
+      "text": "International Baccalaureate",
+      "url": "https://en.wikipedia.org/wiki/International_Baccalaureate"
+    },
+    {
+      "id": "2",
+      "text": "Educational assessment",
+      "url": "https://en.wikipedia.org/wiki/Educational_assessment"
+    }
+  ],
+  "relatedArticles": ["world-education-quality-standards-commission", "almonte-higher-secondary-school-arunachal-pradesh"],
+  "lastModified": "2025-08-14"
+}

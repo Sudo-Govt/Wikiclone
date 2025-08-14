@@ -1,0 +1,63 @@
+{
+  "id": "world-education-quality-standards-commission",
+  "title": "World Education Quality Standards Commission",
+  "summary": "The World Education Quality Standards Commission (WEQSC) is an international body established to evaluate and maintain educational quality standards across global institutions.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "International Educational Commission",
+        "Established": "2008",
+        "Headquarters": "Geneva, Switzerland",
+        "Members": "45 countries",
+        "Website": "https://weqsc.org"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The World Education Quality Standards Commission (WEQSC) is an international organization dedicated to establishing and maintaining educational quality standards worldwide. Founded in 2008, WEQSC works with educational institutions, government bodies, and accreditation agencies to ensure consistent quality in global education."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Mission and Objectives"
+    },
+    {
+      "type": "paragraph",
+      "text": "WEQSC's primary mission is to create unified educational standards that promote quality, accessibility, and recognition of educational achievements across international boundaries. The commission focuses on developing frameworks for curriculum assessment, institutional evaluation, and credential recognition."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Global Impact"
+    },
+    {
+      "type": "paragraph",
+      "text": "The commission has established partnerships with over 200 educational institutions worldwide and has developed the WISE (WEQSC International Secondary Examination) program, which provides standardized assessment frameworks for secondary education globally."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Structure and Governance"
+    },
+    {
+      "type": "paragraph",
+      "text": "WEQSC operates through regional committees representing different geographical areas, with the main governing body located in Geneva, Switzerland. The commission consists of educational experts, policy makers, and institutional representatives from member countries."
+    }
+  ],
+  "categories": ["International organizations", "Education", "Quality assurance", "Academic accreditation"],
+  "references": [
+    {
+      "id": "1",
+      "text": "UNESCO Education Reports",
+      "url": "https://en.wikipedia.org/wiki/UNESCO"
+    },
+    {
+      "id": "2",
+      "text": "International Association of Universities",
+      "url": "https://en.wikipedia.org/wiki/International_Association_of_Universities"
+    }
+  ],
+  "relatedArticles": ["global-commission-for-higher-education-accreditations", "weqsc-international-secondary-examination-wise"],
+  "lastModified": "2025-08-14"
+}

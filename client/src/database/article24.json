@@ -1,0 +1,63 @@
+{
+  "id": "global-commission-for-higher-education-accreditations",
+  "title": "Global Commission for Higher Education Accreditations",
+  "summary": "The Global Commission for Higher Education Accreditations (GCHEA) is an international accreditation body that evaluates and certifies higher education institutions worldwide.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "Accreditation Commission",
+        "Established": "2012",
+        "Headquarters": "London, United Kingdom",
+        "Accredited Institutions": "150+",
+        "Website": "https://gchea.org"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The Global Commission for Higher Education Accreditations (GCHEA) is an independent international organization that provides accreditation services to higher education institutions around the world. Established in 2012, GCHEA focuses on ensuring academic quality and institutional integrity in the global higher education sector."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Accreditation Process"
+    },
+    {
+      "type": "paragraph",
+      "text": "GCHEA follows a comprehensive evaluation process that includes institutional self-assessment, peer review, site visits, and continuous monitoring. The commission evaluates institutions based on academic standards, faculty qualifications, student services, and administrative effectiveness."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Recognition and Partnerships"
+    },
+    {
+      "type": "paragraph",
+      "text": "The commission maintains partnerships with national education ministries and regional accreditation bodies. GCHEA accreditation is recognized by various government agencies and professional organizations, facilitating international student mobility and degree recognition."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Accredited Institutions"
+    },
+    {
+      "type": "paragraph",
+      "text": "GCHEA has accredited over 150 higher education institutions across six continents, including universities, colleges, and specialized institutes. Notable accredited institutions include New States Continental University and various offshore campuses of international universities."
+    }
+  ],
+  "categories": ["Accreditation organizations", "Higher education", "International organizations", "Quality assurance"],
+  "references": [
+    {
+      "id": "1",
+      "text": "International Network for Quality Assurance Agencies in Higher Education",
+      "url": "https://en.wikipedia.org/wiki/International_Network_for_Quality_Assurance_Agencies_in_Higher_Education"
+    },
+    {
+      "id": "2",
+      "text": "Council for Higher Education Accreditation",
+      "url": "https://en.wikipedia.org/wiki/Council_for_Higher_Education_Accreditation"
+    }
+  ],
+  "relatedArticles": ["world-education-quality-standards-commission", "new-states-continental-university"],
+  "lastModified": "2025-08-14"
+}

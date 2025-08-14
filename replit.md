@@ -99,4 +99,11 @@ The application is architected to easily transition from client-side data storag
 - Updated article pages with authentic Wikipedia formatting (tabs, table of contents, references)
 - Redesigned main page with Wikipedia portal-style layout
 - Added new article: New States Continental University (article22.json)
-- Total articles: 22 (expanded from original 20)
+- Added 6 new educational articles (articles 23-28):
+  - World Education Quality Standards Commission (WEQSC)
+  - Global Commission for Higher Education Accreditations (GCHEA)
+  - Winston Leonard Churchill College India (WLC College)
+  - Almonte Higher Secondary School Arunachal Pradesh
+  - WEQSC International Secondary Examination (WISE)
+  - Swami Gyananand Shiksha Parishad Trust - Arunachal Pradesh
+- Total articles: 28 (expanded from original 20)
