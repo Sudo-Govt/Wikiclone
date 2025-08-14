@@ -1,34 +1,134 @@
 import { WikipediaLayout } from "@/components/wikipedia-layout";
 import { ArticleContent } from "@/components/article-content";
-import { getArticleById } from "@/lib/articles";
+import { getArticleById, getAllArticles } from "@/lib/articles";
+import { Link } from "wouter";
 
 export default function Home() {
   // Use Wikipedia article as the main page
   const mainArticle = getArticleById("wikipedia");
+  const allArticles = getAllArticles();
 
   if (!mainArticle) {
     return (
       <WikipediaLayout>
-        <div className="p-6">
-          <h1 className="text-3xl font-normal border-b border-wiki-border pb-2 mb-6">
-            Wikipedia Clone
+        <div className="pl-4 pr-4 pt-3 pb-6 bg-wiki-header">
+          <h1 className="text-2xl font-normal border-b border-wiki-border pb-1 mb-4 text-wiki text-center">
+            Welcome to Wikipedia
           </h1>
-          <div className="bg-yellow-50 border-l-4 border-yellow-400 p-4 mb-6">
-            <div className="flex">
-              <div className="flex-shrink-0">
-                <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
-                  <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
-                </svg>
-              </div>
-              <div className="ml-3">
-                <p className="text-sm text-yellow-700">
-                  <strong>Note:</strong> This is a demonstration clone containing only 20 articles. For the full Wikipedia experience, visit{" "}
-                  <a href="https://wikipedia.org" className="wiki-link">
-                    wikipedia.org
-                  </a>
-                  .
-                </p>
-              </div>
+          <div className="text-center mb-6">
+            <p className="text-sm text-wiki-muted mb-2">
+              the <Link href="/article/wikipedia" className="wiki-link">free encyclopedia</Link> that anyone can edit.
+            </p>
+            <p className="text-xs text-wiki-muted">
+              <strong>{allArticles.length}</strong> articles in English
+            </p>
+          </div>
+          
+          <div className="bg-wiki-bg border border-wiki-border p-4 mb-6 rounded">
+            <div className="text-center">
+              <p className="text-sm text-wiki mb-2">
+                <strong>Note:</strong> This is a demonstration clone containing only {allArticles.length} articles. For the full Wikipedia experience, visit{" "}
+                <a href="https://wikipedia.org" className="wiki-link" target="_blank" rel="noopener noreferrer">
+                  wikipedia.org
+                </a>
+                .
+              </p>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">Featured Articles</h2>
+              <ul className="text-xs space-y-1">
+                {allArticles.slice(0, 5).map((article) => (
+                  <li key={article.id}>
+                    <Link href={`/article/${article.id}`} className="wiki-link">
+                      {article.title}
+                    </Link>
+                    <p className="text-wiki-muted text-xs mt-1">{article.summary.substring(0, 100)}...</p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">Science & Technology</h2>
+              <ul className="text-xs space-y-1">
+                {['artificial-intelligence', 'quantum-physics', 'internet', 'solar-system', 'human-dna'].map((id) => {
+                  const article = getArticleById(id);
+                  return article ? (
+                    <li key={id}>
+                      <Link href={`/article/${id}`} className="wiki-link">
+                        {article.title}
+                      </Link>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">History & Culture</h2>
+              <ul className="text-xs space-y-1">
+                {['world-war-ii', 'ancient-rome', 'renaissance', 'democracy', 'literature'].map((id) => {
+                  const article = getArticleById(id);
+                  return article ? (
+                    <li key={id}>
+                      <Link href={`/article/${id}`} className="wiki-link">
+                        {article.title}
+                      </Link>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">Notable People</h2>
+              <ul className="text-xs space-y-1">
+                {['albert-einstein'].map((id) => {
+                  const article = getArticleById(id);
+                  return article ? (
+                    <li key={id}>
+                      <Link href={`/article/${id}`} className="wiki-link">
+                        {article.title}
+                      </Link>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">Arts & Media</h2>
+              <ul className="text-xs space-y-1">
+                {['photography', 'music-theory', 'literature'].map((id) => {
+                  const article = getArticleById(id);
+                  return article ? (
+                    <li key={id}>
+                      <Link href={`/article/${id}`} className="wiki-link">
+                        {article.title}
+                      </Link>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
+            </div>
+
+            <div className="bg-wiki-bg border border-wiki-border p-4">
+              <h2 className="text-base font-bold mb-3 text-wiki border-b border-wiki-border pb-1">Environment</h2>
+              <ul className="text-xs space-y-1">
+                {['climate-change', 'biodiversity', 'ocean-ecosystems', 'geography'].map((id) => {
+                  const article = getArticleById(id);
+                  return article ? (
+                    <li key={id}>
+                      <Link href={`/article/${id}`} className="wiki-link">
+                        {article.title}
+                      </Link>
+                    </li>
+                  ) : null;
+                })}
+              </ul>
             </div>
           </div>
         </div>

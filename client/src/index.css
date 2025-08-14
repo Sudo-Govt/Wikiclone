@@ -50,12 +50,16 @@
   --tracking-normal: 0em;
   --spacing: 0.25rem;
   
-  /* Wikipedia-specific colors */
-  --wiki-blue: hsl(224 100% 34%);
-  --wiki-blue-visited: hsl(243 100% 25%);
-  --wiki-border: hsl(210 14% 68%);
-  --wiki-bg: hsl(220 14% 98%);
-  --wiki-nav-bg: hsl(0 0% 96%);
+  /* Wikipedia-specific colors - exact match */
+  --wiki-blue: #0645ad;
+  --wiki-blue-visited: #0b0080;
+  --wiki-red: #ba0000;
+  --wiki-border: #a2a9b1;
+  --wiki-bg: #f8f9fa;
+  --wiki-nav-bg: #f6f6f6;
+  --wiki-header-bg: #ffffff;
+  --wiki-text: #222222;
+  --wiki-text-muted: #54595d;
 }
 
 .dark {
@@ -105,11 +109,15 @@
   --shadow-2xl: 0px 2px 0px 0px hsl(202.8169 89.1213% 53.1373% / 0.00);
   
   /* Wikipedia-specific dark mode colors */
-  --wiki-blue: hsl(224 100% 55%);
-  --wiki-blue-visited: hsl(243 100% 70%);
-  --wiki-border: hsl(210 14% 30%);
-  --wiki-bg: hsl(228 9.8039% 12%);
-  --wiki-nav-bg: hsl(228 9.8039% 8%);
+  --wiki-blue: #69b3ff;
+  --wiki-blue-visited: #a294f7;
+  --wiki-red: #ff6b6b;
+  --wiki-border: #54595d;
+  --wiki-bg: #1a1a1a;
+  --wiki-nav-bg: #2c2c2c;
+  --wiki-header-bg: #000000;
+  --wiki-text: #eaecf0;
+  --wiki-text-muted: #a2a9b1;
 }
 
 @layer base {
@@ -124,7 +132,28 @@
 
 /* Wikipedia-specific styles */
 .font-wiki {
-  font-family: 'Liberation Sans', Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--wiki-text);
+}
+
+/* Wikipedia prose styling */
+.prose-wiki p {
+  margin-bottom: 0.75rem;
+}
+
+.prose-wiki a {
+  color: var(--wiki-blue);
+  text-decoration: none;
+}
+
+.prose-wiki a:hover {
+  text-decoration: underline;
+}
+
+.prose-wiki a:visited {
+  color: var(--wiki-blue-visited);
 }
 
 .wiki-link {
@@ -140,6 +169,10 @@
   color: var(--wiki-blue-visited);
 }
 
+.wiki-link-red {
+  color: var(--wiki-red);
+}
+
 .bg-wiki-bg {
   background-color: var(--wiki-bg);
 }
@@ -148,8 +181,20 @@
   background-color: var(--wiki-nav-bg);
 }
 
+.bg-wiki-header {
+  background-color: var(--wiki-header-bg);
+}
+
 .border-wiki-border {
   border-color: var(--wiki-border);
+}
+
+.text-wiki {
+  color: var(--wiki-text);
+}
+
+.text-wiki-muted {
+  color: var(--wiki-text-muted);
 }
 
 .prose-wiki {

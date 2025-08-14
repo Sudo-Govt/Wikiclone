@@ -35,57 +35,61 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
   };
 
   return (
-    <div className="min-h-screen bg-white font-wiki">
+    <div className="min-h-screen bg-wiki-header font-wiki text-wiki">
       {/* Header */}
-      <header className="bg-white border-b border-wiki-border">
-        <div className="max-w-screen-xl mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+      <header className="bg-wiki-header border-b border-wiki-border shadow-sm">
+        <div className="max-w-none px-3">
+          <div className="flex items-center h-12">
             {/* Logo and Title */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center">
               <Button
                 variant="ghost"
                 size="sm"
-                className="lg:hidden p-2"
+                className="lg:hidden p-1 h-8 w-8 mr-2"
                 onClick={toggleSidebar}
                 data-testid="button-menu-toggle"
               >
-                {isSidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isSidebarOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
               </Button>
-              <a href="https://wikipedia.org" className="flex items-center space-x-2" data-testid="link-wikipedia-home">
-                <div className="w-8 h-8 bg-gray-200 rounded border"></div>
-                <span className="text-xl font-bold hidden sm:block">Wikipedia</span>
+              <a href="https://wikipedia.org" className="flex items-center mr-4" data-testid="link-wikipedia-home">
+                <svg className="w-8 h-8 mr-2" viewBox="0 0 103 94" fill="none">
+                  <path d="M51.5 22.5c-3.7 0-7.5 2.7-7.5 7.5v42c0 4.8 3.8 7.5 7.5 7.5s7.5-2.7 7.5-7.5V30c0-4.8-3.8-7.5-7.5-7.5z" fill="#000"/>
+                  <path d="M38.5 30l-12 42h6l9-32 9 32h6l-12-42h-6zm26 0l-12 42h6l9-32 9 32h6l-12-42h-6z" fill="#000"/>
+                  <text x="51.5" y="90" textAnchor="middle" fontSize="12" fill="#000" fontFamily="serif">WIKIPEDIA</text>
+                </svg>
+                <span className="text-base font-normal hidden sm:block">Wikipedia</span>
               </a>
             </div>
 
             {/* Search Bar */}
-            <div className="flex-1 max-w-md mx-4 relative">
-              <div className="relative">
+            <div className="flex-1 max-w-md relative">
+              <div className="flex border border-wiki-border rounded">
                 <Input
                   type="search"
                   placeholder="Search Wikipedia"
                   value={searchQuery}
                   onChange={(e) => handleSearch(e.target.value)}
-                  className="w-full pr-10"
+                  className="flex-1 border-0 rounded-none rounded-l h-8 text-sm focus:ring-0 focus:border-blue-500"
                   data-testid="input-search"
                 />
                 <Button
-                  variant="ghost"
+                  variant="outline"
                   size="sm"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 p-1"
+                  className="h-8 px-3 border-0 border-l border-wiki-border rounded-none rounded-r bg-wiki-bg hover:bg-gray-200"
                   data-testid="button-search"
                 >
-                  <Search className="w-5 h-5 text-gray-500" />
+                  <Search className="w-4 h-4" />
                 </Button>
               </div>
               
               {/* Search Results Dropdown */}
               {showSearchResults && searchResults.length > 0 && (
-                <div className="absolute top-full left-0 right-0 bg-white border border-wiki-border rounded-b shadow-lg z-50 max-h-60 overflow-y-auto">
+                <div className="absolute top-full left-0 right-0 bg-white border border-wiki-border shadow-lg z-50 max-h-60 overflow-y-auto">
                   {searchResults.map((result) => (
                     <Link
                       key={result.id}
                       href={`/article/${result.id}`}
-                      className="block px-4 py-2 hover:bg-gray-100 text-wiki-blue"
+                      className="block px-3 py-2 text-sm hover:bg-gray-100 wiki-link border-b border-gray-100 last:border-b-0"
                       onClick={() => {
                         setShowSearchResults(false);
                         setSearchQuery("");
@@ -100,26 +104,22 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
             </div>
 
             {/* User Menu */}
-            <div className="flex items-center space-x-4">
-              <a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount" className="text-sm wiki-link hidden sm:block" data-testid="link-create-account">
+            <div className="flex items-center ml-4 text-xs">
+              <a href="https://en.wikipedia.org/w/index.php?title=Special:CreateAccount" className="wiki-link mr-3 hidden sm:block" data-testid="link-create-account">
                 Create account
               </a>
-              <a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin" className="text-sm wiki-link" data-testid="link-login">
+              <a href="https://en.wikipedia.org/w/index.php?title=Special:UserLogin" className="wiki-link mr-3" data-testid="link-login">
                 Log in
               </a>
-              <Button variant="ghost" size="sm" className="p-2" data-testid="button-user-menu">
-                <div className="w-5 h-5 flex flex-col justify-center space-y-1">
-                  <div className="w-1 h-1 bg-current rounded-full"></div>
-                  <div className="w-1 h-1 bg-current rounded-full"></div>
-                  <div className="w-1 h-1 bg-current rounded-full"></div>
-                </div>
+              <Button variant="ghost" size="sm" className="p-1 h-6 w-6" data-testid="button-user-menu">
+                <div className="w-3 h-3 border border-gray-400 rounded-sm bg-gray-200"></div>
               </Button>
             </div>
           </div>
         </div>
       </header>
 
-      <div className="max-w-screen-xl mx-auto flex relative">
+      <div className="flex relative">
         {/* Mobile Overlay */}
         {isSidebarOpen && (
           <div
@@ -131,93 +131,172 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
 
         {/* Left Sidebar */}
         <aside
-          className={`w-64 bg-wiki-nav-bg border-r border-wiki-border min-h-screen fixed lg:relative lg:translate-x-0 transform ${
+          className={`w-11/12 sm:w-56 bg-wiki-nav-bg border-r border-wiki-border min-h-screen fixed lg:relative lg:translate-x-0 transform ${
             isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
           } transition-transform duration-300 ease-in-out z-20`}
           data-testid="sidebar-navigation"
         >
-          <div className="p-4">
-            <h3 className="font-bold text-sm mb-3 text-gray-700">Navigation</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <Link href="/" className="block py-1 wiki-link" data-testid="link-main-page">
-                  Main page
-                </Link>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Wikipedia:Featured_articles" className="block py-1 wiki-link" data-testid="link-featured-articles">
-                  Featured articles
-                </a>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Special:Random" className="block py-1 wiki-link" data-testid="link-random-article">
-                  Random article
-                </a>
-              </li>
-              <li>
-                <a href="https://donate.wikimedia.org" className="block py-1 wiki-link" data-testid="link-donate">
-                  Donate
-                </a>
-              </li>
-            </ul>
-
-            <h3 className="font-bold text-sm mb-3 mt-6 text-gray-700">Interaction</h3>
-            <ul className="space-y-1 text-sm">
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Help:Contents" className="block py-1 wiki-link" data-testid="link-help">
-                  Help
-                </a>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Wikipedia:About" className="block py-1 wiki-link" data-testid="link-about">
-                  About Wikipedia
-                </a>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Wikipedia:Community_portal" className="block py-1 wiki-link" data-testid="link-community">
-                  Community portal
-                </a>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Special:RecentChanges" className="block py-1 wiki-link" data-testid="link-recent-changes">
-                  Recent changes
-                </a>
-              </li>
-              <li>
-                <a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" className="block py-1 wiki-link" data-testid="link-contact">
-                  Contact page
-                </a>
-              </li>
-            </ul>
-
-            <h3 className="font-bold text-sm mb-3 mt-6 text-gray-700">Available Articles</h3>
-            <ul className="space-y-1 text-sm max-h-64 overflow-y-auto">
-              {articles.map((article) => (
-                <li key={article.id}>
-                  <Link
-                    href={`/article/${article.id}`}
-                    className="block py-1 wiki-link"
-                    data-testid={`link-article-${article.id}`}
-                  >
-                    {article.title}
+          <div className="px-3 py-2">
+            <div className="mb-4">
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Navigation</h3>
+              <ul className="text-xs leading-relaxed">
+                <li>
+                  <Link href="/" className="block py-0.5 wiki-link" data-testid="link-main-page">
+                    Main page
                   </Link>
                 </li>
-              ))}
-            </ul>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:Contents" className="block py-0.5 wiki-link" data-testid="link-contents">
+                    Contents
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Wikipedia:Featured_articles" className="block py-0.5 wiki-link" data-testid="link-featured-articles">
+                    Featured content
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Portal:Current_events" className="block py-0.5 wiki-link" data-testid="link-current-events">
+                    Current events
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:Random" className="block py-0.5 wiki-link" data-testid="link-random-article">
+                    Random article
+                  </a>
+                </li>
+                <li>
+                  <a href="https://donate.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-donate">
+                    Donate to Wikipedia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://shop.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-shop">
+                    Wikipedia store
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Interaction</h3>
+              <ul className="text-xs leading-relaxed">
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Help:Contents" className="block py-0.5 wiki-link" data-testid="link-help">
+                    Help
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Wikipedia:About" className="block py-0.5 wiki-link" data-testid="link-about">
+                    About Wikipedia
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Wikipedia:Community_portal" className="block py-0.5 wiki-link" data-testid="link-community">
+                    Community portal
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:RecentChanges" className="block py-0.5 wiki-link" data-testid="link-recent-changes">
+                    Recent changes
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Wikipedia:Contact_us" className="block py-0.5 wiki-link" data-testid="link-contact">
+                    Contact page
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Tools</h3>
+              <ul className="text-xs leading-relaxed">
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:WhatLinksHere" className="block py-0.5 wiki-link" data-testid="link-what-links-here">
+                    What links here
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:RecentChangesLinked" className="block py-0.5 wiki-link" data-testid="link-related-changes">
+                    Related changes
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:SpecialPages" className="block py-0.5 wiki-link" data-testid="link-special-pages">
+                    Special pages
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:PermanentLink" className="block py-0.5 wiki-link" data-testid="link-permanent-link">
+                    Permanent link
+                  </a>
+                </li>
+                <li>
+                  <a href="https://en.wikipedia.org/wiki/Special:Information" className="block py-0.5 wiki-link" data-testid="link-page-info">
+                    Page information
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.wikidata.org" className="block py-0.5 wiki-link" data-testid="link-wikidata">
+                    Wikidata item
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Print/export</h3>
+              <ul className="text-xs leading-relaxed">
+                <li>
+                  <a href="#" className="block py-0.5 wiki-link" data-testid="link-printable">
+                    Printable version
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="mb-4">
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">In other projects</h3>
+              <ul className="text-xs leading-relaxed">
+                <li>
+                  <a href="https://commons.wikimedia.org" className="block py-0.5 wiki-link" data-testid="link-commons">
+                    Wikimedia Commons
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-xs font-bold mb-2 text-wiki-text border-b border-wiki-border pb-1">Available Articles</h3>
+              <ul className="text-xs leading-relaxed max-h-48 overflow-y-auto">
+                {articles.map((article) => (
+                  <li key={article.id}>
+                    <Link
+                      href={`/article/${article.id}`}
+                      className="block py-0.5 wiki-link"
+                      data-testid={`link-article-${article.id}`}
+                    >
+                      {article.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </aside>
 
         {/* Main Content */}
-        <main className="flex-1 lg:ml-0 ml-0">
+        <main className="flex-1 lg:ml-0 ml-0 bg-wiki-header">
           {children}
         </main>
       </div>
 
       {/* Footer */}
-      <footer className="bg-wiki-bg border-t border-wiki-border mt-12">
-        <div className="max-w-screen-xl mx-auto px-4 py-8">
-          <div className="text-sm space-y-4">
-            <div className="flex flex-wrap gap-4">
+      <footer className="bg-wiki-header border-t border-wiki-border mt-8">
+        <div className="px-3 py-4">
+          <div className="text-xs text-wiki-muted space-y-3">
+            <div className="flex flex-wrap gap-x-3 gap-y-1">
               <a href="https://en.wikipedia.org/wiki/Wikipedia:Privacy_policy" className="wiki-link" data-testid="link-privacy">
                 Privacy policy
               </a>
@@ -242,18 +321,15 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
               <a href="https://foundation.wikimedia.org/wiki/Cookie_statement" className="wiki-link" data-testid="link-cookies">
                 Cookie statement
               </a>
-              <a href="https://wikimediafoundation.org" className="wiki-link" data-testid="link-wikimedia">
-                Wikimedia Foundation
-              </a>
-              <a href="https://www.mediawiki.org" className="wiki-link" data-testid="link-mediawiki">
-                Powered by MediaWiki
+              <a href="https://m.wikipedia.org" className="wiki-link" data-testid="link-mobile">
+                Mobile view
               </a>
             </div>
-            <div className="text-gray-600">
-              <p>
+            <div className="text-wiki-muted leading-relaxed">
+              <p className="mb-2">
                 Text is available under the{" "}
                 <a href="https://creativecommons.org/licenses/by-sa/3.0/" className="wiki-link" data-testid="link-license">
-                  Creative Commons Attribution-ShareAlike License 3.0
+                  Creative Commons Attribution-ShareAlike License 4.0
                 </a>
                 ; additional terms may apply. By using this site, you agree to the{" "}
                 <a href="https://wikimediafoundation.org/wiki/Terms_of_Use" className="wiki-link" data-testid="link-terms">
@@ -269,6 +345,14 @@ export function WikipediaLayout({ children }: WikipediaLayoutProps) {
                 </a>
                 , a non-profit organization.
               </p>
+              <div className="flex items-center gap-4 text-xs">
+                <a href="https://wikimediafoundation.org" className="wiki-link" data-testid="link-wikimedia">
+                  <img src="https://en.wikipedia.org/static/images/footer/wikimedia-button.png" alt="Wikimedia Foundation" className="h-4" />
+                </a>
+                <a href="https://www.mediawiki.org" className="wiki-link" data-testid="link-mediawiki">
+                  <img src="https://en.wikipedia.org/static/images/footer/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" className="h-4" />
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -13,12 +13,15 @@ export function ArticleContent({ article }: ArticleContentProps) {
     switch (content.type) {
       case 'infobox':
         return (
-          <div key={index} className="float-right ml-4 mb-4 w-80 bg-wiki-bg border border-wiki-border p-4 text-sm">
-            <div className="text-center font-bold mb-2">{article.title}</div>
-            <div className="text-xs text-gray-600">
+          <div key={index} className="float-right ml-4 mb-4 w-80 bg-wiki-bg border border-wiki-border text-xs">
+            <div className="text-center font-bold py-2 bg-wiki-nav-bg border-b border-wiki-border text-wiki">{article.title}</div>
+            <div className="p-3">
               {content.data && Object.entries(content.data).map(([key, value]) => (
-                <div key={key} className="mb-1">
-                  <strong>{key}:</strong> {value}
+                <div key={key} className="border-b border-gray-200 py-1 last:border-b-0">
+                  <div className="flex">
+                    <div className="font-medium text-wiki w-1/3 pr-2">{key}</div>
+                    <div className="text-wiki w-2/3">{value}</div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -27,7 +30,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
 
       case 'paragraph':
         return (
-          <p key={index} className="mb-4" data-testid={`text-paragraph-${index}`}>
+          <p key={index} className="mb-3 text-wiki leading-relaxed" data-testid={`text-paragraph-${index}`}>
             {content.text}
           </p>
         );
@@ -35,10 +38,10 @@ export function ArticleContent({ article }: ArticleContentProps) {
       case 'heading':
         const HeadingTag = `h${Math.min(content.level || 2, 6)}` as keyof JSX.IntrinsicElements;
         const headingClass = content.level === 2 
-          ? "text-xl font-bold mt-8 mb-4 border-b border-gray-300 pb-1"
+          ? "text-lg font-bold mt-6 mb-3 border-b border-wiki-border pb-1 text-wiki clear-both"
           : content.level === 3
-          ? "text-lg font-semibold mt-6 mb-3"
-          : "text-base font-semibold mt-4 mb-2";
+          ? "text-base font-bold mt-5 mb-2 text-wiki"
+          : "text-sm font-bold mt-4 mb-2 text-wiki";
         
         return (
           <HeadingTag 
@@ -53,7 +56,7 @@ export function ArticleContent({ article }: ArticleContentProps) {
 
       case 'list':
         return (
-          <ul key={index} className="list-disc list-inside space-y-2 mb-4" data-testid={`list-${index}`}>
+          <ul key={index} className="list-disc ml-5 mb-3 space-y-1 text-wiki" data-testid={`list-${index}`}>
             {content.items?.map((item, itemIndex) => (
               <li key={itemIndex} data-testid={`list-item-${index}-${itemIndex}`}>
                 {item}
@@ -79,30 +82,47 @@ export function ArticleContent({ article }: ArticleContentProps) {
   };
 
   return (
-    <div className="p-6">
-      {/* Breadcrumb */}
-      <div className="text-sm text-gray-500 mb-4" data-testid="breadcrumb">
+    <div className="pl-4 pr-4 pt-3 pb-6 bg-wiki-header">
+      {/* Breadcrumb - Wikipedia style */}
+      <div className="text-xs text-wiki-muted mb-2" data-testid="breadcrumb">
         <Link href="/" className="wiki-link" data-testid="link-breadcrumb-home">
           Main Page
         </Link>
       </div>
 
       {/* Article Title */}
-      <h1 className="text-3xl font-normal border-b border-wiki-border pb-2 mb-6" data-testid="text-article-title">
+      <h1 className="text-2xl font-normal border-b border-wiki-border pb-1 mb-4 text-wiki leading-normal" data-testid="text-article-title">
         {article.title}
       </h1>
 
+      {/* Article tabs (mimicking Wikipedia) */}
+      <div className="border-b border-wiki-border mb-4">
+        <ul className="flex text-xs">
+          <li className="mr-6">
+            <span className="inline-block py-1 border-b-2 border-transparent text-wiki font-medium">
+              Article
+            </span>
+          </li>
+          <li className="mr-6">
+            <a href="#" className="inline-block py-1 border-b-2 border-transparent wiki-link hover:border-wiki-border">
+              Talk
+            </a>
+          </li>
+        </ul>
+      </div>
+
       {/* Article Content */}
-      <div className="prose prose-wiki max-w-none">
+      <div className="prose prose-wiki max-w-none text-sm leading-relaxed">
         {/* Table of Contents */}
-        {article.content.filter(c => c.type === 'heading').length > 0 && (
-          <div className="bg-wiki-bg border border-wiki-border p-4 mb-6" data-testid="table-of-contents">
-            <h2 className="text-xl font-bold mb-4 border-b border-gray-300 pb-1">Contents</h2>
-            <ol className="list-decimal list-inside space-y-1 text-sm">
+        {article.content.filter(c => c.type === 'heading').length > 3 && (
+          <div className="bg-wiki-bg border border-wiki-border p-3 mb-4 float-left mr-4 w-64" data-testid="table-of-contents">
+            <div className="text-center text-sm font-bold mb-2 pb-1 border-b border-wiki-border text-wiki">Contents</div>
+            <ol className="text-xs space-y-1">
               {article.content
                 .filter(c => c.type === 'heading')
                 .map((heading, index) => (
-                  <li key={index}>
+                  <li key={index} className={heading.level === 2 ? "font-medium" : "ml-3"}>
+                    <span className="text-wiki-muted mr-1">{index + 1}</span>
                     <a 
                       href={`#${heading.text?.toLowerCase().replace(/\s+/g, '-')}`}
                       className="wiki-link"
@@ -121,11 +141,11 @@ export function ArticleContent({ article }: ArticleContentProps) {
 
         {/* See also section */}
         {relatedArticles.length > 0 && (
-          <>
-            <h2 className="text-xl font-bold mt-8 mb-4 border-b border-gray-300 pb-1" data-testid="heading-see-also">
+          <div className="clear-both">
+            <h2 className="text-lg font-bold mt-6 mb-3 border-b border-wiki-border pb-1 text-wiki" data-testid="heading-see-also">
               See also
             </h2>
-            <ul className="list-disc list-inside space-y-1 mb-6" data-testid="list-related-articles">
+            <ul className="list-disc ml-5 mb-4 space-y-1 text-wiki" data-testid="list-related-articles">
               {relatedArticles.map((relatedArticle) => (
                 <li key={relatedArticle.id}>
                   <Link 
@@ -138,34 +158,35 @@ export function ArticleContent({ article }: ArticleContentProps) {
                 </li>
               ))}
             </ul>
-          </>
+          </div>
         )}
 
         {/* References */}
         {article.references.length > 0 && (
-          <>
-            <h2 id="references" className="text-xl font-bold mt-8 mb-4 border-b border-gray-300 pb-1" data-testid="heading-references">
+          <div className="clear-both">
+            <h2 id="references" className="text-lg font-bold mt-6 mb-3 border-b border-wiki-border pb-1 text-wiki" data-testid="heading-references">
               References
             </h2>
-            <div className="text-sm space-y-2" data-testid="section-references">
+            <ol className="text-xs space-y-1 mb-4" data-testid="section-references">
               {article.references.map((ref) => (
-                <div key={ref.id} data-testid={`reference-${ref.id}`}>
-                  {ref.id}. {ref.text}
+                <li key={ref.id} className="text-wiki" data-testid={`reference-${ref.id}`}>
+                  <span className="text-wiki-muted">^ </span>
+                  {ref.text}
                   {ref.url && (
                     <a href={ref.url} className="wiki-link ml-1" data-testid={`link-reference-${ref.id}`}>
                       [Link]
                     </a>
                   )}
-                </div>
+                </li>
               ))}
-            </div>
-          </>
+            </ol>
+          </div>
         )}
 
         {/* Categories */}
         {article.categories.length > 0 && (
-          <div className="mt-8 pt-4 border-t border-wiki-border" data-testid="section-categories">
-            <div className="text-sm">
+          <div className="mt-6 pt-3 border-t border-wiki-border clear-both" data-testid="section-categories">
+            <div className="text-xs text-wiki">
               <strong>Categories:</strong>{" "}
               {article.categories.map((category, index) => (
                 <span key={category}>
