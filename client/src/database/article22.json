@@ -40,14 +40,16 @@
   "categories": ["Universities in Belize", "Private universities", "Education", "Higher education"],
   "references": [
     {
-      "id": 1,
+      "id": "1",
       "text": "Belize Ministry of Education",
       "url": "https://en.wikipedia.org/wiki/Ministry_of_Education,_Belize"
     },
     {
-      "id": 2,
+      "id": "2",
       "text": "Delaware Division of Corporations",
       "url": "https://en.wikipedia.org/wiki/Delaware_Division_of_Corporations"
     }
-  ]
+  ],
+  "relatedArticles": [],
+  "lastModified": "2025-08-14"
 }

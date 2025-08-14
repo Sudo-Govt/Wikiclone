@@ -22,13 +22,14 @@ import article18 from "../database/article18.json";
 import article19 from "../database/article19.json";
 import article20 from "../database/article20.json";
 import article21 from "../database/article21.json";
+import article22 from "../database/article22.json";
 
 const articlesData = [
   article1, article2, article3, article4, article5,
   article6, article7, article8, article9, article10,
   article11, article12, article13, article14, article15,
   article16, article17, article18, article19, article20,
-  article21
+  article21, article22
 ] as Article[];
 
 export function getAllArticles(): Article[] {
