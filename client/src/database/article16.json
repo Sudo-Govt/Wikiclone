@@ -1,0 +1,29 @@
+{
+  "id": "biodiversity",
+  "title": "Biodiversity",
+  "summary": "Biodiversity is the variety and variability of life on Earth, typically measured as the variation at the genetic, species, and ecosystem level.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Biodiversity is the variety and variability of life on Earth. Biodiversity is typically a measure of variation at the genetic, species, and ecosystem level. Terrestrial biodiversity is usually greater near the equator, which is the result of the warm climate and high primary productivity."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Importance"
+    },
+    {
+      "type": "paragraph",
+      "text": "Biodiversity is essential for ecosystem services that humans depend on, including food security, medicine, climate regulation, and cultural values."
+    }
+  ],
+  "categories": ["Biodiversity", "Ecology", "Conservation biology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Wilson, E.O. (1988). Biodiversity. National Academy Press."
+    }
+  ],
+  "relatedArticles": ["ocean-ecosystems", "climate-change", "human-dna"],
+  "lastModified": "2024-01-15"
+}

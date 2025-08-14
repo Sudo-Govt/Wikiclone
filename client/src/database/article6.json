@@ -1,0 +1,39 @@
+{
+  "id": "solar-system",
+  "title": "Solar System",
+  "summary": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it, including eight planets and their natural satellites.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Age": "4.568 billion years",
+        "Location": "Local Interstellar Cloud, Local Bubble, Orion Arm, Milky Way",
+        "System mass": "1.0014 solar masses",
+        "Nearest star": "Proxima Centauri (4.24 ly)",
+        "Planets": "8"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The Solar System is the gravitationally bound system of the Sun and the objects that orbit it. It formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system's mass is in the Sun, with most of the remaining mass contained in the planet Jupiter."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Structure"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Solar System consists of the Sun and its planetary system of eight planets, their moons, and other non-stellar objects. The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed of rock and metal."
+    }
+  ],
+  "categories": ["Solar System", "Astronomy", "Planetary science"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Chaisson, Eric; McMillan, Steve (2016). Astronomy: A Beginner's Guide to the Universe. Pearson."
+    }
+  ],
+  "relatedArticles": ["space-exploration", "quantum-physics", "geography"],
+  "lastModified": "2024-01-15"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "music-theory",
+  "title": "Music theory",
+  "summary": "Music theory is the language and practice that musicians use to understand and communicate how music works.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Music theory is the language and practice that musicians use to understand and communicate how music works. It encompasses the elements, structures, and methods involved in composing and analyzing music."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Elements"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Pitch and scales",
+        "Rhythm and meter",
+        "Harmony",
+        "Form and analysis",
+        "Expression and articulation"
+      ]
+    }
+  ],
+  "categories": ["Music theory", "Music", "Arts"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Tonal Harmony, Stefan Kostka & Dorothy Payne, McGraw-Hill (2003)."
+    }
+  ],
+  "relatedArticles": ["literature", "renaissance", "philosophy"],
+  "lastModified": "2024-01-15"
+}

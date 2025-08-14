@@ -1,0 +1,83 @@
+{
+  "id": "wikipedia",
+  "title": "Wikipedia",
+  "summary": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "Online encyclopedia",
+        "Available in": "300+ languages",
+        "Owner": "Wikimedia Foundation",
+        "Created": "January 15, 2001",
+        "Founder": "Jimmy Wales, Larry Sanger"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Wikipedia is a free online encyclopedia, created and edited by volunteers around the world and hosted by the Wikimedia Foundation. Wikipedia is the largest and most-read reference work in history. It is consistently one of the 10 most popular websites ranked by Similarweb and formerly Alexa; as of 2023, Wikipedia was ranked the 5th most popular site in the world."
+    },
+    {
+      "type": "paragraph",
+      "text": "It was founded by Jimmy Wales and Larry Sanger on January 15, 2001, and is hosted by the Wikimedia Foundation, an American nonprofit organization. Initially available only in English, versions in other languages were quickly developed."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wikipedia was initially launched as Nupedia on March 9, 2000, under the ownership of Bomis, a web portal company. Its main figures were Bomis CEO Jimmy Wales and Larry Sanger, editor-in-chief for Nupedia and later Wikipedia."
+    },
+    {
+      "type": "paragraph",
+      "text": "Nupedia was intended to be a free encyclopedia, with articles written by experts and reviewed under a formal process. Despite its good intentions, the process proved too slow and expensive, and Nupedia was eventually discontinued."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "Launch of Wikipedia"
+    },
+    {
+      "type": "paragraph",
+      "text": "On January 15, 2001, Sanger and Wales launched Wikipedia as a side project to Nupedia. The concept was to create an encyclopedia using wiki software, allowing anyone to edit articles directly through a web browser. This revolutionary approach to collaborative knowledge creation quickly gained traction."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Concept and principles"
+    },
+    {
+      "type": "paragraph",
+      "text": "Wikipedia operates on several core principles that distinguish it from traditional encyclopedias:"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Neutral point of view (NPOV): Articles should present information fairly and without bias",
+        "Verifiability: Information must be backed by reliable sources",
+        "No original research: Articles should not present new theories or ideas",
+        "Open editing: Anyone can contribute and edit articles",
+        "Assume good faith: Contributors are assumed to be acting in good faith"
+      ]
+    }
+  ],
+  "categories": ["Online encyclopedias", "Collaborative projects", "Wikimedia Foundation", "Internet properties established in 2001"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Sanger, Larry (2005). \"The Early History of Nupedia and Wikipedia: A Memoir\". Slashdot."
+    },
+    {
+      "id": "2", 
+      "text": "Wales, Jimmy (2004). \"Wikipedia is an encyclopedia\". WikiEN-l mailing list."
+    },
+    {
+      "id": "3",
+      "text": "Wikimedia Foundation (2023). \"Annual Report\". Wikimedia Foundation."
+    }
+  ],
+  "relatedArticles": ["albert-einstein", "artificial-intelligence", "internet"],
+  "lastModified": "2024-01-15"
+}

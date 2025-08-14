@@ -1,0 +1,35 @@
+{
+  "id": "philosophy",
+  "title": "Philosophy",
+  "summary": "Philosophy is the study of general and fundamental questions about existence, knowledge, values, reason, mind, and language.",
+  "content": [
+    {
+      "type": "paragraph", 
+      "text": "Philosophy is the study of general and fundamental questions about existence, knowledge, values, reason, mind, and language. Such questions are often posed as problems to be studied or resolved."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Branches"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Metaphysics",
+        "Epistemology", 
+        "Ethics",
+        "Logic",
+        "Aesthetics"
+      ]
+    }
+  ],
+  "categories": ["Philosophy", "Humanities", "Knowledge"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Russell, Bertrand (1945). A History of Western Philosophy. Simon and Schuster."
+    }
+  ],
+  "relatedArticles": ["democracy", "literature", "renaissance"],
+  "lastModified": "2024-01-15"
+}

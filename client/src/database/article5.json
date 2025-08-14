@@ -1,0 +1,44 @@
+{
+  "id": "artificial-intelligence",
+  "title": "Artificial intelligence",
+  "summary": "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to natural intelligence displayed by humans and animals.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Artificial intelligence (AI) is intelligence demonstrated by machines, in contrast to natural intelligence displayed by humans and animals. Leading AI textbooks define the field as the study of \"intelligent agents\": any device that perceives its environment and takes actions that maximize its chance of successfully achieving its goals."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "The field of AI research was founded at a workshop at Dartmouth College in 1956, where the term \"artificial intelligence\" was first coined. Early development included game-playing programs and theorem provers."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Applications"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Machine learning and pattern recognition",
+        "Natural language processing",
+        "Computer vision",
+        "Robotics",
+        "Expert systems"
+      ]
+    }
+  ],
+  "categories": ["Artificial intelligence", "Computer science", "Technology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Russell, Stuart; Norvig, Peter (2010). Artificial Intelligence: A Modern Approach. Prentice Hall."
+    }
+  ],
+  "relatedArticles": ["quantum-physics", "internet", "medicine"],
+  "lastModified": "2024-01-15"
+}

@@ -1,0 +1,29 @@
+{
+  "id": "ocean-ecosystems",
+  "title": "Ocean ecosystems",
+  "summary": "Ocean ecosystems are complex networks of living organisms and their physical environment in marine waters.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Ocean ecosystems are complex networks of living organisms and their physical environment in marine waters. They include a vast range of habitats from coastal wetlands to the deep sea, supporting incredible biodiversity."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Marine biodiversity"
+    },
+    {
+      "type": "paragraph",
+      "text": "Oceans contain the greatest diversity of life on Earth, with ecosystems ranging from coral reefs to deep-sea hydrothermal vents, each supporting unique communities of organisms."
+    }
+  ],
+  "categories": ["Marine biology", "Ecosystems", "Oceanography"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Thurman, Harold V. (2016). Introductory Oceanography. Pearson."
+    }
+  ],
+  "relatedArticles": ["climate-change", "biodiversity", "geography"],
+  "lastModified": "2024-01-15"
+}

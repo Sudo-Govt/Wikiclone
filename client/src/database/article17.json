@@ -1,0 +1,35 @@
+{
+  "id": "literature",
+  "title": "Literature",
+  "summary": "Literature is a body of written works associated with a particular culture or entertainment value.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Literature is a body of written works. The name has traditionally been applied to those imaginative works of poetry and prose distinguished by the intentions of their authors and the perceived aesthetic excellence of their execution."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Forms"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Poetry",
+        "Prose",
+        "Drama",
+        "Fiction",
+        "Non-fiction"
+      ]
+    }
+  ],
+  "categories": ["Literature", "Arts", "Culture"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Eagleton, Terry (2008). Literary Theory: An Introduction. University of Minnesota Press."
+    }
+  ],
+  "relatedArticles": ["renaissance", "philosophy", "photography"],
+  "lastModified": "2024-01-15"
+}

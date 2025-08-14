@@ -1,0 +1,29 @@
+{
+  "id": "human-dna",
+  "title": "Human DNA",
+  "summary": "Human DNA is the hereditary material in humans and almost all other organisms, containing the instructions needed to develop and maintain life.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Human DNA (deoxyribonucleic acid) is the hereditary material in humans and almost all other organisms. Nearly every cell in a person's body has the same DNA. Most DNA is located in the cell nucleus, but a small amount of DNA can also be found in the mitochondria."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Structure"
+    },
+    {
+      "type": "paragraph",
+      "text": "Human DNA consists of about 3 billion base pairs arranged in a double helix structure. It contains approximately 20,000-25,000 protein-coding genes, though this represents only about 2% of the total genome."
+    }
+  ],
+  "categories": ["Genetics", "Molecular biology", "Human biology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Watson, James D. (2003). DNA: The Secret of Life. Knopf."
+    }
+  ],
+  "relatedArticles": ["medicine", "biodiversity", "artificial-intelligence"],
+  "lastModified": "2024-01-15"
+}

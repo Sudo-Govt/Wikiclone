@@ -1,0 +1,29 @@
+{
+  "id": "internet",
+  "title": "Internet",
+  "summary": "The Internet is the global system of interconnected computer networks that uses the Internet protocol suite to communicate between networks and devices.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "The Internet is the global system of interconnected computer networks that uses the Internet protocol suite (TCP/IP) to communicate between networks and devices. It is a network of networks that consists of private, public, academic, business, and government networks of local to global scope."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "The Internet has its origins in ARPANET, which was funded by the US Department of Defense in the 1960s. The first message sent over the ARPANET was transmitted on October 29, 1969."
+    }
+  ],
+  "categories": ["Internet", "Computer networks", "Technology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Leiner, Barry M. (2009). A Brief History of the Internet. Computer Communication Review."
+    }
+  ],
+  "relatedArticles": ["artificial-intelligence", "wikipedia", "photography"],
+  "lastModified": "2024-01-15"
+}

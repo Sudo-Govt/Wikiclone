@@ -1,0 +1,38 @@
+{
+  "id": "climate-change",
+  "title": "Climate change",
+  "summary": "Climate change refers to long-term shifts in global or regional climate patterns, attributed largely to increased atmospheric greenhouse gas concentrations.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Climate change refers to long-term shifts in global or regional climate patterns. Since the mid-20th century, scientists have observed warming trends that are attributed largely to increased atmospheric concentrations of greenhouse gases produced by human activities, particularly fossil fuel burning."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Evidence"
+    },
+    {
+      "type": "paragraph",
+      "text": "Evidence for climate change includes rising global temperatures, melting ice sheets and glaciers, rising sea levels, and shifts in precipitation patterns and extreme weather events."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Causes"
+    },
+    {
+      "type": "paragraph",
+      "text": "The primary cause of recent climate change is human activities that increase greenhouse gas concentrations in the atmosphere, including burning fossil fuels, deforestation, and industrial processes."
+    }
+  ],
+  "categories": ["Climate change", "Environmental science", "Global warming"],
+  "references": [
+    {
+      "id": "1",
+      "text": "IPCC (2021). Climate Change 2021: The Physical Science Basis. Cambridge University Press."
+    }
+  ],
+  "relatedArticles": ["ocean-ecosystems", "biodiversity", "geography"],
+  "lastModified": "2024-01-15"
+}

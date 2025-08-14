@@ -1,0 +1,29 @@
+{
+  "id": "space-exploration",
+  "title": "Space exploration",
+  "summary": "Space exploration is the use of astronomy and space technology to explore outer space.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Space exploration is the use of astronomy and space technology to explore outer space. While the exploration of space is carried out mainly by astronomers with telescopes, its physical exploration though is conducted both by unmanned robotic space probes and human spaceflight."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "Space exploration began in the 20th century with the development of rocket technology. The Space Race between the United States and Soviet Union accelerated developments in the 1950s and 1960s."
+    }
+  ],
+  "categories": ["Space exploration", "Astronomy", "Technology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Logsdon, John M. (2010). John F. Kennedy and the Race to the Moon. Palgrave Macmillan."
+    }
+  ],
+  "relatedArticles": ["solar-system", "artificial-intelligence", "quantum-physics"],
+  "lastModified": "2024-01-15"
+}

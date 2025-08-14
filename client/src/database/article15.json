@@ -1,0 +1,39 @@
+{
+  "id": "ancient-rome",
+  "title": "Ancient Rome",
+  "summary": "Ancient Rome was a civilization that began as a city-state in the Italian Peninsula around the 8th century BC.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Founded": "753 BC (traditional date)",
+        "Dissolved": "476/1453 AD",
+        "Capital": "Rome",
+        "Government": "Kingdom, Republic, Empire",
+        "Languages": "Latin"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "Ancient Rome was a civilization that began as a city-state in the Italian Peninsula around the 8th century BC. Located along the Mediterranean Sea and centered on the city of Rome, it expanded to become one of the largest empires in the ancient world."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Government"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ancient Rome passed through three distinct periods: the Roman Kingdom (753–509 BC), the Roman Republic (509–27 BC), and the Roman Empire (27 BC–476/1453 AD)."
+    }
+  ],
+  "categories": ["Ancient Rome", "Ancient civilizations", "European history"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Gibbon, Edward (1776). The History of the Decline and Fall of the Roman Empire."
+    }
+  ],
+  "relatedArticles": ["democracy", "renaissance", "world-war-ii"],
+  "lastModified": "2024-01-15"
+}

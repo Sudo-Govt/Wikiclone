@@ -1,0 +1,34 @@
+{
+  "id": "democracy",
+  "title": "Democracy",
+  "summary": "Democracy is a form of government in which the people have the authority to deliberate and decide legislation, or to choose governing officials to do so.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Democracy is a form of government in which the people have the authority to deliberate and decide legislation ('direct democracy'), or to choose governing officials to do so ('representative democracy'). The term comes from the Greek words 'demos' (people) and 'kratos' (rule)."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Types"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Direct democracy",
+        "Representative democracy", 
+        "Constitutional democracy",
+        "Liberal democracy"
+      ]
+    }
+  ],
+  "categories": ["Democracy", "Political systems", "Government"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Dahl, Robert A. (1998). On Democracy. Yale University Press."
+    }
+  ],
+  "relatedArticles": ["ancient-rome", "philosophy", "world-war-ii"],
+  "lastModified": "2024-01-15"
+}

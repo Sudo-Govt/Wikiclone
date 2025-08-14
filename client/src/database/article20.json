@@ -1,0 +1,34 @@
+{
+  "id": "geography",
+  "title": "Geography",
+  "summary": "Geography is a field of science devoted to the study of the lands, features, inhabitants, and phenomena of the Earth and planets.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Geography is a field of science devoted to the study of the lands, features, inhabitants, and phenomena of the Earth and planets. The first recorded use of the word geography was by the ancient Greek scholar Eratosthenes."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Branches"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Physical geography",
+        "Human geography",
+        "Geomatics",
+        "Regional geography"
+      ]
+    }
+  ],
+  "categories": ["Geography", "Earth sciences", "Social sciences"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Johnston, R.J. (2000). The Dictionary of Human Geography. Blackwell Publishers."
+    }
+  ],
+  "relatedArticles": ["climate-change", "ocean-ecosystems", "solar-system"],
+  "lastModified": "2024-01-15"
+}

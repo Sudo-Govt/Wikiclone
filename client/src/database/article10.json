@@ -1,0 +1,29 @@
+{
+  "id": "photography",
+  "title": "Photography",
+  "summary": "Photography is the art, application, and practice of creating durable images by recording light or other electromagnetic radiation.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Photography is the art, application, and practice of creating durable images by recording light or other electromagnetic radiation, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "The first permanent photograph was made in 1826 by French inventor Nicéphore Niépce. Photography has since evolved through numerous technological advances and artistic movements."
+    }
+  ],
+  "categories": ["Photography", "Visual arts", "Technology"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Rosenblum, Naomi (2007). A World History of Photography. Abbeville Press."
+    }
+  ],
+  "relatedArticles": ["internet", "renaissance", "literature"],
+  "lastModified": "2024-01-15"
+}

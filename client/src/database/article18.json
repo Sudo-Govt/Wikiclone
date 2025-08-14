@@ -1,0 +1,29 @@
+{
+  "id": "medicine",
+  "title": "Medicine",
+  "summary": "Medicine is the science and practice of caring for a patient, managing the diagnosis, prognosis, prevention, treatment, palliation of their injury or disease.",
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "Medicine is the science and practice of caring for a patient, managing the diagnosis, prognosis, prevention, treatment, palliation of their injury or disease, and promoting their health. Medicine encompasses a variety of health care practices evolved to maintain and restore health."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "History"
+    },
+    {
+      "type": "paragraph",
+      "text": "The practice of medicine has ancient origins. Early medical traditions include those of Ancient Egypt, Mesopotamia, India, China, and Greece."
+    }
+  ],
+  "categories": ["Medicine", "Health care", "Science"],
+  "references": [
+    {
+      "id": "1",
+      "text": "Porter, Roy (1997). The Greatest Benefit to Mankind: A Medical History of Humanity. Norton."
+    }
+  ],
+  "relatedArticles": ["human-dna", "artificial-intelligence", "biodiversity"],
+  "lastModified": "2024-01-15"
+}
