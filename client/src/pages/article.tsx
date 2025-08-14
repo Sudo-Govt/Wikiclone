@@ -2,10 +2,21 @@ import { useParams } from "wouter";
 import { WikipediaLayout } from "@/components/wikipedia-layout";
 import { ArticleContent } from "@/components/article-content";
 import { getArticleById } from "@/lib/articles";
+import { useEffect } from "react";
+import { generateArticleSEO, updatePageSEO } from "@/lib/seo";
 
 export default function Article() {
   const params = useParams<{ id: string }>();
   const article = getArticleById(params.id);
+
+  // Update SEO for article pages
+  useEffect(() => {
+    if (article) {
+      const baseUrl = window.location.origin;
+      const seoData = generateArticleSEO(article, baseUrl);
+      updatePageSEO(seoData);
+    }
+  }, [article]);
 
   if (!article) {
     return (

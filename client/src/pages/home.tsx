@@ -2,8 +2,16 @@ import { WikipediaLayout } from "@/components/wikipedia-layout";
 import { ArticleContent } from "@/components/article-content";
 import { getArticleById, getAllArticles } from "@/lib/articles";
 import { Link } from "wouter";
+import { useEffect } from "react";
+import { generateHomeSEO, updatePageSEO } from "@/lib/seo";
 
 export default function Home() {
+  // Update SEO for homepage
+  useEffect(() => {
+    const baseUrl = window.location.origin;
+    const seoData = generateHomeSEO(baseUrl);
+    updatePageSEO(seoData);
+  }, []);
   // Use Wikipedia article as the main page
   const mainArticle = getArticleById("wikipedia");
   const allArticles = getAllArticles();
