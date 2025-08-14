@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Wikipedia clone built as a full-stack web application using React, Express, and TypeScript. The application simulates a simplified version of Wikipedia with a collection of 20 articles covering various topics including science, history, technology, and culture. The frontend provides a Wikipedia-like interface with search functionality, article navigation, and responsive design, while the backend serves the application and manages routing.
+This is a Wikipedia clone built as a full-stack web application using React, Express, and TypeScript. The application simulates a simplified version of Wikipedia with a collection of 22 articles covering various topics including science, history, technology, culture, and education. The frontend provides a Wikipedia-like interface with search functionality, article navigation, and responsive design, while the backend serves the application and manages routing.
 
 ## User Preferences
 
@@ -89,3 +89,14 @@ The interface closely mimics Wikipedia's design patterns:
 - **Drizzle Kit**: Database migrations and schema management
 
 The application is architected to easily transition from client-side data storage to a full database-backed system by implementing the existing storage interfaces with database operations.
+
+## Recent Changes
+
+### August 14, 2025
+- Updated Wikipedia clone to match exact Wikipedia styling and layout
+- Implemented precise Wikipedia colors, typography, and visual design
+- Added Wikipedia-style header, navigation, search bar, and footer
+- Updated article pages with authentic Wikipedia formatting (tabs, table of contents, references)
+- Redesigned main page with Wikipedia portal-style layout
+- Added new article: New States Continental University (article22.json)
+- Total articles: 22 (expanded from original 20)

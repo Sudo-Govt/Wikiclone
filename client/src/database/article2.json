@@ -1,65 +1,46 @@
 {
-  "id": "albert-einstein",
-  "title": "Albert Einstein",
-  "summary": "Albert Einstein was a German-born theoretical physicist who is widely held to be one of the greatest and most influential scientists of all time.",
+  "title": "New States Continental University",
+  "infobox": {
+    "logo": "https://nscu.govt.ac/logo.png",
+    "type": "Private University",
+    "established": "2010",
+    "headquarters": "Belize City, Belize",
+    "us_campus": "Delaware, USA",
+    "offshore_colleges": 30,
+    "website": "https://nscu.govt.ac"
+  },
   "content": [
     {
-      "type": "infobox",
-      "data": {
-        "Born": "March 14, 1879, Ulm, Kingdom of Württemberg, German Empire",
-        "Died": "April 18, 1955 (aged 76), Princeton, New Jersey, United States",
-        "Known for": "Theory of relativity, Photoelectric effect, E=mc²",
-        "Awards": "Nobel Prize in Physics (1921)",
-        "Fields": "Theoretical physics"
-      }
-    },
-    {
       "type": "paragraph",
-      "text": "Albert Einstein (14 March 1879 – 18 April 1955) was a German-born theoretical physicist who is widely held to be one of the greatest and most influential scientists of all time. Best known for developing the theory of relativity, Einstein also made important contributions to quantum mechanics, and was thus a central figure in the revolutionary reshaping of the scientific understanding of nature that modern physics accomplished in the first decades of the twentieth century."
-    },
-    {
-      "type": "paragraph",
-      "text": "His mass–energy equivalence formula E = mc², which arises from relativity theory, has been called \"the world's most famous equation\". He received the 1921 Nobel Prize in Physics \"for his services to theoretical physics, and especially for his discovery of the law of the photoelectric effect\", a pivotal step in the development of quantum theory."
+      "html": "The <b>New States Continental University</b> (<abbr>NSCU</abbr>) is a registered private institution headquartered in Belize. It maintains an additional campus in <a href='https://en.wikipedia.org/wiki/Delaware'>Delaware, United States</a> and is officially recognized by the <a href='https://en.wikipedia.org/wiki/Ministry_of_Education,_Belize'>Belize Ministry of Education</a>."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Early life and education"
+      "text": "Offshore Colleges and Partnerships"
     },
     {
       "type": "paragraph",
-      "text": "Einstein was born in the German Empire, but moved to Switzerland in 1895, forsaking his German citizenship (as a subject of the Kingdom of Württemberg) the following year. In 1897, at the age of 17, he enrolled in the mathematics and physics teaching diploma program at the Swiss Federal Polytechnic School in Zurich, graduating in 1900."
+      "html": "NSCU has over 30 offshore campuses across micro-nations and small countries, including <a href='/wiki/WLC_College'>WLC College</a> in India, Blue Lagoon University in Tuvalu, Coral Reef Institute in Kiribati, and others."
     },
     {
       "type": "heading",
       "level": 2,
-      "text": "Scientific career"
+      "text": "Accreditation"
     },
     {
       "type": "paragraph",
-      "text": "Einstein's scientific career is generally divided into two periods. In the first, he developed special and general relativity, while in the second, he became isolated from the mainstream of modern physics as he sought a unified field theory."
-    },
-    {
-      "type": "heading",
-      "level": 3,
-      "text": "Theory of relativity"
-    },
-    {
-      "type": "paragraph",
-      "text": "Einstein's special theory of relativity emerged from his attempts to reconcile the laws of mechanics with the laws of the electromagnetic field. He published his first paper on special relativity in 1905, showing that space and time are interwoven into a single continuum known as spacetime."
+      "html": "The university adheres to the standards set by the <a href='https://en.wikipedia.org/wiki/Ministry_of_Education,_Belize'>Belize Ministry of Education</a> and is incorporated in compliance with the <a href='https://en.wikipedia.org/wiki/Delaware_Division_of_Corporations'>Delaware Division of Corporations</a>."
     }
   ],
-  "categories": ["German physicists", "Theoretical physicists", "Nobel Prize laureates", "Relativity"],
   "references": [
     {
-      "id": "1",
-      "text": "Isaacson, Walter (2007). Einstein: His Life and Universe. Simon & Schuster."
+      "label": "Belize Ministry of Education – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Ministry_of_Education,_Belize"
     },
     {
-      "id": "2",
-      "text": "Pais, Abraham (1982). Subtle is the Lord: The Science and the Life of Albert Einstein. Oxford University Press."
+      "label": "Delaware Division of Corporations – Wikipedia",
+      "url": "https://en.wikipedia.org/wiki/Delaware_Division_of_Corporations"
     }
-  ],
-  "relatedArticles": ["quantum-physics", "world-war-ii", "solar-system"],
-  "lastModified": "2024-01-15"
+  ]
 }

@@ -1,0 +1,53 @@
+{
+  "id": "new-states-continental-university",
+  "title": "New States Continental University",
+  "summary": "New States Continental University (NSCU) is a private university headquartered in Belize City, Belize, with a campus in Delaware, USA and over 30 offshore campuses worldwide.",
+  "content": [
+    {
+      "type": "infobox",
+      "data": {
+        "Type": "Private University",
+        "Established": "2010",
+        "Headquarters": "Belize City, Belize",
+        "US Campus": "Delaware, USA",
+        "Offshore Colleges": "30",
+        "Website": "https://nscu.govt.ac"
+      }
+    },
+    {
+      "type": "paragraph",
+      "text": "The New States Continental University (NSCU) is a registered private institution headquartered in Belize. It maintains an additional campus in Delaware, United States and is officially recognized by the Belize Ministry of Education."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Offshore Colleges and Partnerships"
+    },
+    {
+      "type": "paragraph",
+      "text": "NSCU has over 30 offshore campuses across micro-nations and small countries, including WLC College in India, Blue Lagoon University in Tuvalu, Coral Reef Institute in Kiribati, and others."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Accreditation"
+    },
+    {
+      "type": "paragraph",
+      "text": "The university adheres to the standards set by the Belize Ministry of Education and is incorporated in compliance with the Delaware Division of Corporations."
+    }
+  ],
+  "categories": ["Universities in Belize", "Private universities", "Education", "Higher education"],
+  "references": [
+    {
+      "id": 1,
+      "text": "Belize Ministry of Education",
+      "url": "https://en.wikipedia.org/wiki/Ministry_of_Education,_Belize"
+    },
+    {
+      "id": 2,
+      "text": "Delaware Division of Corporations",
+      "url": "https://en.wikipedia.org/wiki/Delaware_Division_of_Corporations"
+    }
+  ]
+}
